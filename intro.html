@@ -45,7 +45,7 @@
 		background-size:100% 100%;
 		/* 去除两张背景图片之间空白 */
 		margin-top: 40px;
-		opacity: 0.9;
+		/* opacity: 0.8; */
 	}
 	.intro-first .intro-title{
 		font-size: 5em;
@@ -82,6 +82,68 @@
 		transform:scale(1.1,1.1);
 		transition: 0.2s;
 	}
+
+	.intro-second{
+		height: 855px;
+		background: url('http://pic1.win4000.com/wallpaper/2/53b0d4d83d5f2.jpg') no-repeat center center fixed;
+		background-size:100% 100%;
+		/* 去除两张背景图片之间空白 */
+		padding-top: -40px;
+		/* opacity: 0.8; */
+	}
+	/* 第三个部分 作品简介 */
+	.work-third{
+		height: 100%; /* 通过设置height为100%来适应在不同设备上不同屏幕时，背景图片仍然正常显示，内容不会超出背景图片*/
+		background: url('https://41.media.tumblr.com/92e61775d4c3edcc5145936e3703d125/tumblr_nt5uo9fH9y1ud7rr3o1_1280.jpg') no-repeat center center fixed;
+		background-size:100% 100%;
+	}
+	
+	.work-third h1{
+		text-align: center;
+		font: normal bold 3em Monospace;
+		padding-top: 5%;
+	}
+	.my-work>div{
+
+		height: 300px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-right: 0px;
+		margin-left: 0px;
+		border: 1px outset #d5d5d5;
+	}
+	/* 居中显示 */
+	.work-intro{
+		margin: 0 auto;
+		padding: 25px;
+		text-align: center;
+		border: solid 1px red;
+		height: 100px;
+
+	}
+	@media(max-width:767px){
+		.my-work>div{
+			height: 350px;
+		}
+		.my-work img{
+		display: block;
+		text-align: center;
+		max-height:250px;
+		margin: 0 auto;
+		}
+		.my-work div.work-intro{
+		width: 450px;
+		}
+	}
+	.my-work>div:hover{
+		box-shadow: 5px 10px 5px #111111;
+		transition: 0.4s;
+	}
+	.my-work a:hover{
+		background-color: #000000;
+		opacity: 0.5;
+		z-index: 1;
+	}
 	</style>
 </head>
 <body>
@@ -114,13 +176,80 @@
 				</div>
 				<div class="intro-link col-lg-8 col-lg-offset-2 col-xs-6 col-xs-offset-3">
 					<ul class="list-inline first-list"style="text-align: center;">
-					<li><a class='btn btn-default btn-lg' href=""><span class='glyphicon glyphicon-tree-deciduous'>Github</span></a></li>
-					<li><a class='btn btn-default btn-lg' href=""><span class="glyphicon glyphicon-glass">Blog</span></a></li>
-					<li><a class='btn btn-default btn-lg' href=""><span class="glyphicon glyphicon-th-large">Linkedin</span></a></li>
-					<li><a class='btn btn-default btn-lg' href=""><span class="glyphicon glyphicon-home">freeCodeCamp</span></a></li>
+					<li><a class='btn btn-default btn-lg' href=""><small><span class='glyphicon glyphicon-tree-deciduous'></small>Github</span></a></li>
+					<li><a class='btn btn-default btn-lg' href=""><small><span class="glyphicon glyphicon-glass"></small>Blog</span></a></li>
+					<li><a class='btn btn-default btn-lg' href=""><small><span class="glyphicon glyphicon-th-large"></small>Linkedin</span></a></li>
+					<li><a class='btn btn-default btn-lg' href=""><small><span class="glyphicon glyphicon-home"></small>freeCodeCamp</span></a></li>
 				</ul>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="intro-second">
+	 	<div>加入弹幕</div>
+	</div>
+
+	<div class="work-third">
+		<div class='container'>
+			<div class='row my-work'>
+				<h1>Some of my works</h1>
+				<div class='1-work col-md-4 col-sm-6' style="">
+					<a href="#">
+						<!-- 加入响应式的图 -->
+						<img src="https://40.media.tumblr.com/a73e79ce9844761d7cdc93d202b5cea1/tumblr_nwh4iomduD1ud7rr3o1_1280.jpg" class="img-responsive" >
+					</a>
+					<div class="work-intro">
+						<p>作品简介简介简介</p>
+					</div>
+				</div>
+				<div class='2-work col-md-4 col-sm-6'>
+					<a href="#">
+						<!-- 加入响应式的图 -->
+						<img src="https://40.media.tumblr.com/a73e79ce9844761d7cdc93d202b5cea1/tumblr_nwh4iomduD1ud7rr3o1_1280.jpg" class="img-responsive" >
+					</a>
+					<div class="work-intro">
+						<p>作品简介简介简介</p>
+					</div>
+				</div>
+				<div class='3-work col-md-4 col-sm-6'>
+					<a href="#">
+						<!-- 加入响应式的图 -->
+						<img src="https://40.media.tumblr.com/a73e79ce9844761d7cdc93d202b5cea1/tumblr_nwh4iomduD1ud7rr3o1_1280.jpg" class="img-responsive" >
+					</a>
+					<div class="work-intro">
+						<p>作品简介简介简介</p>
+					</div>
+				</div>
+				<div class='4-work col-md-4 col-sm-6'>
+					<a href="#">
+						<!-- 加入响应式的图 -->
+						<img src="https://40.media.tumblr.com/a73e79ce9844761d7cdc93d202b5cea1/tumblr_nwh4iomduD1ud7rr3o1_1280.jpg" class="img-responsive" >
+					</a>
+					<div class="work-intro">
+						<p>作品简介简介简介</p>
+					</div>
+				</div>
+				<div class='5-work col-md-4 col-sm-6'>
+					<a href="#">
+						<!-- 加入响应式的图 -->
+						<img src="https://40.media.tumblr.com/a73e79ce9844761d7cdc93d202b5cea1/tumblr_nwh4iomduD1ud7rr3o1_1280.jpg" class="img-responsive" >
+					</a>
+					<div class="work-intro">
+						<p>作品简介简介简介</p>
+					</div>
+				</div>
+				<div class='6-work col-md-4 col-sm-6'>
+					<a href="#">
+						<!-- 加入响应式的图 -->
+						<img src="https://40.media.tumblr.com/a73e79ce9844761d7cdc93d202b5cea1/tumblr_nwh4iomduD1ud7rr3o1_1280.jpg" class="img-responsive" >
+					</a>
+					<div class="work-intro">
+						<p>作品简介简介简介</p>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </body>
