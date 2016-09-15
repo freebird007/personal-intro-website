@@ -24,6 +24,7 @@
 	body{
 		width: 100%;
 	}
+	/* 导航栏的设置 */
 	.topnav{
 		background-color: #ccc;
 	}
@@ -43,6 +44,8 @@
 	.nav-right ul.navbar-nav li a:hover{
 		background-color: #ddd;
 	}
+	/* 第一部分，inro-first的设计 */
+	/* 背景设计 */
 	.intro-first{
 		height: 855px;
 		background: url('https://40.media.tumblr.com/1b916597d3e174399cb7adadddb66ede/tumblr_nt5uk4psl31ud7rr3o1_1280.jpg') no-repeat center center fixed;
@@ -51,6 +54,7 @@
 		margin-top: 40px;
 		/* opacity: 0.8; */
 	}
+
 	.intro-first .intro-title{
 		font-size: 5em;
 		color: #ddd;
@@ -67,6 +71,7 @@
 		margin-top:200px;
 		}
 	}
+	/* intro-first中间的按钮组设置 */
 	.first-list .btn{
 		margin-top:50px;/*按钮组和上方字体保持一定距离*/
 		font: normal bold 24px Monospace;
@@ -84,9 +89,10 @@
 		text-shadow:1px 1px 2px black;/* text-shadow 属性向文本设置阴影。 text-shadow: h-shadow v-shadow blur color;*/
 		box-shadow: 2px 2px 4px black;
 		transform:scale(1.1,1.1);/* 旋转DIV 此处进行2D旋转,也就是放大 */
-		transition: 0.2s;
+		transition: 0.2s; /* 响应时间设置 */
 	}
-
+	/* 第二部分 intro-second的设计*/
+	/* 背景设计 */
 	.intro-second{
 		height: 855px;
 		background: url('http://pic1.win4000.com/wallpaper/2/53b0d4d83d5f2.jpg') no-repeat center center fixed;
@@ -95,51 +101,68 @@
 		padding-top: -40px;
 		/* opacity: 0.8; */
 	}
-	/* 弹幕墙大小的设置 */
-	.danmu .dm_screen{
-		border: solid 1px #ddd;
+	.second-title{
+		text-align:center;
+		margin-top: 100px;
+		color: #110011;
 	}
-	.danmu .dm_screen .dm_mask{
-		width:100%;
-		height: 380px;
+	/* 响应式设计 */
+	@media(max-width:1200px){
+		.intro-second{
+		height: 100%;
+		}
+		.my-plan{
+		margin:30px auto;
+		}
+	} 
+	@media(max-width:767px){
+		.intro-second{
+		height: 100%;
+		}
+		.second-title{
+		text-align:center;
+		margin-top: 50px;
+		}
+		/* .my-plan{
+			width: 80%;
+		} */
 	}
-	.danmu .dm_screen .dm_show div{
-		font-size:22px;
-		line-height: 36px;
-		font-weight: 500;
-		color:#fff;
-		position: absolute;
-		left: 0;
-		top: 0;
+	/* 第二部分的内容*/
+	 .second-title h1{
+	 	font: normal bold 48px Georgia,serif,'Lucida Console';
+	 }
+	 /* 左边的介绍内容、文字的设计 */
+	 .second-cont{
+		margin-top: 2%;
+		font: italic 24px "Comic Sans MS",Arial;
+		color: #FFFFF0;
+
+	 }
+	 /* 右边的计划栏my-plan的设计 */
+	.my-plan{
+		background-color: #FFD700;
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 30px;
+		max-width: 450px;
+		height: 350px;
+		border: 2px solid black;
+		border-radius: 10px; box-shadow: 2px 2px 2px #FFD700;
 	}
-	/* 弹幕输入框和发射按钮、清屏等按钮的设置 */
-	.s_con p{
-		text-align: center;/* 居中摆放$_con下的p元素 */
+	.my-plan p{
+		text-align: left;
 	}
-	.s_txt{
-		width:25%;
-		border: solid 1px #aaa;
-		padding: 10px;
-	}
-	.s_sub{
-		border: solid 2px #0000ff;
-		background-color: white;
-		padding: 8px 30px;
-		margin-right: 30px;
-		color: #0000ff;
-	}
-	.s_del{
-		border: solid 2px #ff0000;
-		background-color: white;
-		padding: 8px 30px;
-		margin-right: 30px;
-		color: #ff0000;
-	}
+	 .my-plan h2{
+	 	text-shadow:2px 2px 2px black;
+	 }
+	
 	/* 第三个部分 作品简介 */
+	/* 背景设计 */
 	.work-third{
 		height: 100%; /* 通过设置height为100%来适应在不同设备上不同屏幕时，背景图片仍然正常显示，内容不会超出背景图片*/
 		background: url('https://41.media.tumblr.com/92e61775d4c3edcc5145936e3703d125/tumblr_nt5uo9fH9y1ud7rr3o1_1280.jpg') no-repeat center center fixed;
 		background-size:100% 100%;
+		background-color: #ddd;
 	}
 	
 	.work-third h1{
@@ -149,7 +172,7 @@
 	}
 	.my-work>div{
 
-		height: 300px;
+		height: 303px;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		margin-right: 0px;
@@ -159,11 +182,15 @@
 	/* 居中显示 */
 	.work-intro{
 		margin: 0 auto;
-		padding: 25px;
 		text-align: center;
-		border: solid 1px red;
+		border: solid 1px;
 		height: 100px;
-
+		background-color: #000000;
+		
+	}
+	/* 作品简介文字设置 */
+	.work-intro h3,.work-intro p{
+		color: white;
 	}
 	@media(max-width:767px){
 		.my-work>div{
@@ -183,130 +210,25 @@
 		box-shadow: 5px 10px 5px #111111;
 		transition: 0.4s;
 	}
-	.my-work a:hover{
-		background-color: #000000;
-		opacity: 0.5;
+	/* .my-work a{
+		display: block;
+		background-color: black;
+	} */
+	.my-work a img:hover{
+		opacity: 0.3;
 		z-index: 1;
+		transition: 0.2s;
 	}
 	</style>
 
 
-	<script>
-	//在intro-second中加入弹幕功能
-	$(document).ready(function(){
-		/*$(".s_sub").click(function(){
-			var text=$(".s_txt").val();
-			$("#demo").html(text);
-		});*/
-		
-		/*创建wilddog实例*/
-		// 初始化
-		var config = {
-		  authDomain: "danmu0571.wilddog.com",
-		  syncURL: "https://danmu0571.wilddogio.com"
-		};
-		wilddog.initializeApp(config);
-		var ref = wilddog.sync().ref();
-		ref.child("Jor4").set({
-	    "name": "Jone",
-	    "age": 23
-		});
-		
-		var arr=[];
-		//点击发射按钮,获取输入框的数据,把数据提交到云端message
-		$(".s_sub").click(function(){
-			var text=$(".s_txt").val();//获取输入框数据
-			$("#demo").html(text);
-			ref.child('message').push(text);//把text写入到message节点
-			$(".s_txt").val("");
-		});
-		//响应按钮点击事件
-		$(".s_txt").keypress(function(event){
-			if(event.keyCode=="13"){//判断是否按了enter键
-				$(".s_sub").trigger("click");//触发s_sub元素上的click事件
-			}
-		});
-
-		//响应按键消除事件
-		$(".s_del").click(function(){
-			ref.remove();
-			arr=[];
-			$('.dm_show').empty();//移除dm_show中的所有内容
-		});
-		//监听云端数据的变化,有新增数据时,显示新增的数据
-		ref.child('message').on('child_added',function(snapshot){
-			var text=snapshot.val();//获取新增数据
-			arr.push(text);//把新增数据添加到arr数组中
-			var textObj=$("<div class=\"dm_message\"></div>")//选取textObj元素
-			textObj.text(text);//对textObj设置元素的内容
-			$(".dm_show").append(textObj);//在dm_show之后插入textObj,使新增的数据可以马上显示在屏幕里
-			moveObj(textObj);//滚动显示新增的数据
-		});
-		
-		ref.on("child_removed",function(){
-			arr=[];
-			$(".dm_show".empty)//获取清屏事件之后,对dm_show进行清空
-		})
-
-		//滚动/逐行显示
-		var topMin = $('.dm_mask').offset().top;//显示框距离顶部距离
-		
-		var topMax=topMin+$(".dm_mask").height();//显示框底部距离顶部距离
-		
-		var _top=topMin;//每个滚动纤细距离顶部距离
-		
-		var moveObj=function(obj){
-			
-			var _left = $('.dm_mask').width()-obj.width();
-			$('#demo1').html(_left);
-			_top = _top + 50;
-			if (_top > (topMax - 50)) {
-	      		_top = topMin;
-	    	}
-	    	/*显示的弹幕的CSS样式*/
-			obj.css({
-				'left':_left,
-				'top':_top,
-				'color':getRandomColor()
-			});
-			//设置动画的时间
-			var time=20000+10000*Math.random();	
-			/*注意设置弹幕的position属性,设置animate属性,使弹幕在屏幕上从右到左滑动*/
-			obj.animate({
-				left:"-"+_left+"px"},time,function(){
-					obj.remove();
-				});
-		}
-		
-		
-		
-		//获取随机颜色
-		var getRandomColor=function(){
-			return '#'+(function(h){
-				return new Array(7-h.length).join("0")+h
-			})((Math.random()*0x1000000<<0).toString(16))
-		}
-
-		//每3秒选取一条消息播放
-		var getAndRun=function(){
-			if(arr.length>0){
-				var n=Math.floor(Math.random()*arr.length+1)-1;
-				var textObj=$("<div>"+arr[n]+"</div>");
-				$(".dm_show").append(textObj);
-				moveObj(textObj);
-			}
-			setTimeout(getAndRun,3000);
-		}
-		jQuery.fx.interval = 50;
-		getAndRun();
-	});
-	</script>
+	
 </head>
 <body>
 	<nav class='navbar navbar-default navbar-fixed-top topnav' role="navigation">
 		<div class="container">
 			<div class='navbar-header'>
-				<a href="#" class="navbar-brand text">navi1</a>
+				<a href="#" class="navbar-brand text">Githup</a>
 				<button type="button" class="navbar-toggle left" data-toggle="collapse" data-target="#respon">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -315,15 +237,15 @@
 			</div>
 			<div class="collapse navbar-collapse nav-right" id="respon">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="btn btn-default" href="">navi2</a></li>
-					<li><a class="btn btn-default" href="">navi2</a></li>
-					<li><a class="btn btn-default" href="">navi2</a></li>
-					<li><a class="btn btn-default" href="">navi2</a></li>
+					<li><a class="btn btn-default" href="#one">Home</a></li>
+					<li><a class="btn btn-default" href="#two">About</a></li>
+					<li><a class="btn btn-default" href="#three">Work</a></li>
+					<!-- <li><a class="btn btn-default" href="">navi2</a></li> -->
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="intro-first">
+	<div class="intro-first" id="one">
 		<div class='container'>
 			<div class="row">
 				<div class="col-lg-12">
@@ -342,31 +264,28 @@
 		</div>
 	</div>
 
-	<div class="intro-second">
-	 	<div class='danmu'>
-			<div class="dm_screen">
-				<div class="dm_mask"></div>
-				<div class="dm_show">
-					
-				</div>
-			</div>
-			<div class='send'>
-				<div class="s_fiter">
-					<div class="s_con">
-						<p><input type="text" class="s_txt" placeholder="说点什么吧？"></p>
-						<p>
-							<input type="button" class="s_sub" value="fire">
-							<input type="button" class="s_del" value="清屏">
-						</p>
-					</div>
-				</div>
-				
-			</div>
-
-		</div>
+	<div class="intro-second" id='two'>
+	 	<div class='container'>
+	 		<div class='row'>
+	 			<div class="second-title"> 
+	 				<h1>好好学习,天天向上</h1>
+	 			</div>
+	 			<div class='second-cont col-md-6'>
+	 				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这个网站还有许多不足啊,每次看到就突然不知道怎么设计好了(懵逼脸),不过bootstrap确实是个好东西!之前用的CSS+HTML的做起来代码量比这个多好多,而且响应式设计也更麻烦,bootstrap的网格系统很方便啊,我要努力吃透它!</p>
+	 				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现在已经学习了html,css,javascript,jQuery,bootstrap框架,css3和html5也略有涉及,也做了一些小项目出来了,可以往下翻看看我的作品哦!</p>
+	 				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PHP也学了许多了.其实当初就是抱着想自己做个博客的心态来学PHP的.自己还写了个类似thinkPHP的框架出来,过段时间整理出来!</p>
+	 			</div>
+	 			<div class="my-plan col-md-5 col-md-offset-1">
+	 				<h2>My Plan Board</h2>
+	 					<p>1、完善之前做的致橡树</p>
+	 					<p>2、继续完成freeCodeCamp上面的项目</p>
+	 					<p>3、...</p>
+	 			</div>
+	 		</div>
+	 	</div>
 	</div>
 
-	<div class="work-third">
+	<div class="work-third" id="three">
 		<div class='container'>
 			<div class='row my-work'>
 				<h1>Some of my works</h1>
@@ -376,7 +295,8 @@
 						<img src="https://40.media.tumblr.com/a73e79ce9844761d7cdc93d202b5cea1/tumblr_nwh4iomduD1ud7rr3o1_1280.jpg" class="img-responsive" >
 					</a>
 					<div class="work-intro">
-						<p>作品简介简介简介</p>
+						<h3><i>A random quote machine</i></h3>
+						<p>Bootstrap and jQuery</p>
 					</div>
 				</div>
 				<div class='2-work col-md-4 col-sm-6'>
@@ -428,5 +348,6 @@
 			
 		</div>
 	</div>
+	<div></div>
 </body>
 </html>
